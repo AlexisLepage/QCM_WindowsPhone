@@ -1,0 +1,12 @@
+C:\Users\bdague\documents\visual studio 2015\Projects\DeviceStatus\MVVM\Bin\Debug\MVVM.dll
+C:\Users\bdague\documents\visual studio 2015\Projects\DeviceStatus\MVVM\Bin\Debug\MVVM.pdb
+C:\Users\bdague\documents\visual studio 2015\Projects\DeviceStatus\MVVM\obj\Debug\MVVM.dll
+C:\Users\bdague\documents\visual studio 2015\Projects\DeviceStatus\MVVM\obj\Debug\MVVM.pdb
+C:\Users\bdague\Documents\Visual Studio 2015\Projects\BookShop\MVVM\Bin\Debug\MVVM.dll
+C:\Users\bdague\Documents\Visual Studio 2015\Projects\BookShop\MVVM\Bin\Debug\MVVM.pdb
+C:\Users\bdague\Documents\Visual Studio 2015\Projects\BookShop\MVVM\obj\Debug\MVVM.dll
+C:\Users\bdague\Documents\Visual Studio 2015\Projects\BookShop\MVVM\obj\Debug\MVVM.pdb
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\BookShop\V1\MVVM\Bin\Debug\MVVM.dll
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\BookShop\V1\MVVM\Bin\Debug\MVVM.pdb
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\BookShop\V1\MVVM\obj\Debug\MVVM.dll
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\BookShop\V1\MVVM\obj\Debug\MVVM.pdb
