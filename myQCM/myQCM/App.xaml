@@ -8,7 +8,35 @@
     <!--Ressources d'applications-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:myQCM" x:Key="LocalizedStrings"/>
-    </Application.Resources>
+
+    <DataTemplate x:Key="CategoryTemplate">
+      <StackPanel VerticalAlignment="Center">
+          <TextBlock Text="{Binding Name}"/>
+
+        </StackPanel>
+    </DataTemplate>
+
+    <Style x:Key="HorizontalListBoxStyle" TargetType="ListBox">
+      <Style.Setters>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"   Value="Auto"/>
+        <Setter Property="ItemsPanel">
+          <Setter.Value>
+            <ItemsPanelTemplate>
+              <StackPanel Orientation="Vertical"/>
+            </ItemsPanelTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style.Setters>
+    </Style>
+
+    <Style TargetType="ListBoxItem">
+      <Style.Setters>
+        <Setter Property="VerticalAlignment"        Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Margin"                     Value="5"/>
+      </Style.Setters>
+    </Style>
+  </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
         <!--Objet requis qui gère les événements de durée de vie pour l'application-->

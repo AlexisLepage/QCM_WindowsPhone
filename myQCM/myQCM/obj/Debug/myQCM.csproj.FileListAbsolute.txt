@@ -33,3 +33,41 @@ C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\ProjectArchitectures.txt
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\MDILProjectFiles.xml
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\XapCacheFile.xml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.csprojResolveAssemblyReference.cache
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\App.g.cs
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.g.resources
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.Resources.AppResources.resources
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.csproj.GenerateResource.Cache
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\ApplicationIcon.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\myQCM.dll
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\myQCM.pdb
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\resources.pri
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\AppxManifest.xml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\myQCM.build.appxrecipe
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Properties\WMAppManifest.xml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\AppManifest.xaml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\myQCM_Debug_AnyCPU.xap
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\MVVM.dll
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\MVVM.pdb
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\Views\CategoriesPage.g.cs
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.dll
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.pdb
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\priconfig.xml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\priconfig.xml.intermediate
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\layout.resfiles
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\layout.resfiles.intermediate
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\resources.resfiles
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\resources.resfiles.intermediate
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\pri.resfiles
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\pri.resfiles.intermediate
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\qualifiers.txt
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\qualifiers.txt.intermediate
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\ProjectArchitectures.txt
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\MDILProjectFiles.xml
+D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\XapCacheFile.xml
