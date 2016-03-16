@@ -1,1 +1,2 @@
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\MVVM\MVVM.csproj;neutral
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\myQCM.csproj;neutral

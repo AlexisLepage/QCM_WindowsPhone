@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using myQCM.Resources;
+using myQCM.Models;
 
 namespace myQCM
 {
@@ -17,6 +18,15 @@ namespace myQCM
         public MainPage()
         {
             InitializeComponent();
+
+            User u = new User();
+            DateTime date = DateTime.Now;
+            u.Name = "Lepage";
+            u.Firstname = "Alexis";
+            u.Password = "passw0rd";
+            u.Email = "alexis.lepage@hotmail.fr";
+            u.CreatedAt = date;
+            u.UpdatedAt = date;
 
             // Exemple de code pour la localisation d'ApplicationBar
             //BuildLocalizedApplicationBar();

@@ -12,8 +12,11 @@ C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\Properties\WMAppManifest.xml
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\AppManifest.xaml
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\myQCM_Debug_AnyCPU.xap
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\MVVM.dll
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\MVVM.pdb
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\myQCM.csprojResolveAssemblyReference.cache
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\App.g.cs
-C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\MainPage.g.cs
+C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\Views\MainPage.g.cs
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\myQCM.g.resources
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\myQCM.Resources.AppResources.resources
 C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\myQCM.csproj.GenerateResource.Cache

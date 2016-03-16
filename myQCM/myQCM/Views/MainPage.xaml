@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="myQCM.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <TextBlock Text="MyQCM" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+    </StackPanel>
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+      <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="CONNEXION" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="30"/>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+          <TextBox Width="auto"/>
+          <PasswordBox Width="auto" />
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Connexion" />
+
+    </Grid>
+      
+  </Grid>
+
+</phone:PhoneApplicationPage>

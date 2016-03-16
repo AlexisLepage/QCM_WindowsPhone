@@ -21,6 +21,9 @@
     <AppxPackagedFile Include="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\myQCM.dll">
       <PackagePath>myQCM.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\MVVM\Bin\Debug\MVVM.dll">
+      <PackagePath>MVVM.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>
