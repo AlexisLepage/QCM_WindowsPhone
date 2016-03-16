@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVVM.ViewModels
+namespace MVVM.Interfaces
 {
-    public interface IViewModelList<T>
+    public interface IViewModelList<T> : IViewModel
     {
         T SelectedItem { get; set; }
 
         ObservableCollection<T> ItemsSource { get; set; }
 
+        DelegateCommand AddItemCommand { get; }
 
     }
 }

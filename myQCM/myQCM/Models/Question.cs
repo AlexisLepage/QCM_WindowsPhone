@@ -7,25 +7,29 @@ using System.Threading.Tasks;
 
 namespace myQCM.Models
 {
-    public class Category : ObservableObject
+    public class Question : ObservableObject
     {
 
         #region Fields
 
         private int _IdServer;
 
-        private string _Name;
+        private string _Title;
+
+        private int _Value;
 
         private DateTime _CreatedAt;
 
         private DateTime _UpdatedAt;
+
+        private Qcm _Qcm;
 
         #endregion
 
         #region Properties
 
         /// <summary>
-        /// IdServer Category.
+        /// IdServer Question.
         /// Getter and Setter for IdServer.
         /// </summary>
         public int IdServer
@@ -35,17 +39,27 @@ namespace myQCM.Models
         }
 
         /// <summary>
-        /// Name Category.
-        /// Getter and Setter for Name.
+        /// Title Question.
+        /// Getter and Setter for Title.
         /// </summary>
-        public string Name
+        public string Title
         {
-            get { return _Name; }
-            set { SetProperty(nameof(Name), ref _Name, value); }
+            get { return _Title; }
+            set { SetProperty(nameof(Title), ref _Title, value); }
         }
 
         /// <summary>
-        /// CreatedAt Category.
+        /// Value Question.
+        /// Getter and Setter for Value.
+        /// </summary>
+        public int Value
+        {
+            get { return _Value; }
+            set { SetProperty(nameof(Value), ref _Value, value); }
+        }
+
+        /// <summary>
+        /// CreatedAt Question.
         /// Getter and Setter for CreatedAt.
         /// </summary>
         public DateTime CreatedAt
@@ -55,7 +69,7 @@ namespace myQCM.Models
         }
 
         /// <summary>
-        /// UpdatedAt Category.
+        /// UpdatedAt Question.
         /// Getter and Setter for UpdatedAt.
         /// </summary>
         public DateTime UpdatedAt
@@ -64,16 +78,28 @@ namespace myQCM.Models
             set { SetProperty(nameof(UpdatedAt), ref _UpdatedAt, value); }
         }
 
+        /// <summary>
+        /// Qcm Question.
+        /// Getter and Setter for Qcm.
+        /// </summary>
+        public Qcm Qcm
+        {
+            get { return _Qcm; }
+            set { SetProperty(nameof(Qcm), ref _Qcm, value); }
+        }
+
         #endregion
 
         #region Constructors
 
-        public Category(int id_server, string name, DateTime created_at, DateTime updated_at)
+        public Question(int id_server, string title, int value, DateTime created_at, DateTime updated_at, Qcm qcm)
         {
-            Name = name;
             IdServer = id_server;
+            Title = title;
+            Value = value;
             CreatedAt = created_at;
             UpdatedAt = updated_at;
+            Qcm = qcm;
         }
 
         #endregion
@@ -82,11 +108,9 @@ namespace myQCM.Models
 
         public override string ToString()
         {
-            return Name;
+            return Title;
         }
 
         #endregion
-
-
     }
 }

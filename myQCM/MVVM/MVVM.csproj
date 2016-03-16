@@ -96,8 +96,14 @@
     <Compile Include="Service\NavigationService\INavigationService.cs" />
     <Compile Include="Service\NavigationService\PhoneNavigationService.cs" />
     <Compile Include="Service\ServiceResolver.cs" />
-    <Compile Include="ViewModels\Interfaces\IViewModelListT.cs" />
+    <Compile Include="Interfaces\IViewModel.cs" />
+    <Compile Include="Interfaces\IViewModelItemT.cs" />
+    <Compile Include="Interfaces\IViewModelListT.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelItemT.cs" />
     <Compile Include="ViewModels\ViewModelListT.cs" />
+    <Compile Include="Interfaces\IMVVMPage.cs" />
+    <Compile Include="Views\MVVMPhonePage.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

@@ -1,4 +1,5 @@
 ﻿using MVVM.Data;
+using MVVM.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MVVM.ViewModels
 {
-    public abstract class ViewModelList<T> : ObservableObject, IViewModelList<T>
+    public abstract class ViewModelList<T> : ViewModel, IViewModelList<T>
     {
         #region Fields
 
@@ -32,7 +33,6 @@ namespace MVVM.ViewModels
             set { SetProperty(nameof(SelectedItem), ref _SelectedItem, value); }
         }
 
-
         public DelegateCommand AddItemCommand => _AddItemCommand;
 
         #endregion
@@ -43,24 +43,26 @@ namespace MVVM.ViewModels
         {
             ItemsSource = new ObservableCollection<T>();
 
-            _AddItemCommand = new DelegateCommand(ExecuteDeviceStatusCommand, CanExecuteDeviceStatusCommand);
+            _AddItemCommand = new DelegateCommand(ExecuteAddItem, CanExecuteAddItem);
         }
 
         #endregion
 
         #region Methods
 
-        public abstract void LoadData();
+        #region AddItemCommand
 
-        public virtual bool CanExecuteDeviceStatusCommand(object parameter)
+        protected virtual bool CanExecuteAddItem(object parameter)
         {
             return false;
         }
 
-        public virtual void ExecuteDeviceStatusCommand(object parameter)
+        protected virtual void ExecuteAddItem(object parameter)
         {
 
         }
+
+        #endregion
 
         #endregion
     }
