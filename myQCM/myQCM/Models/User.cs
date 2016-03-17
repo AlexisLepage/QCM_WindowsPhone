@@ -37,24 +37,40 @@ namespace myQCM.Models
             set { SetProperty(nameof(Id), ref _Id, value); }
         }
 
+        /// <summary>
+        /// Username User.
+        /// Getter and Setter for Username.
+        /// </summary>
         public string Username
         {
             get { return _Username; }
             set { SetProperty(nameof(Username), ref _Username, value); }
         }
 
+        /// <summary>
+        /// Name User.
+        /// Getter and Setter for Name.
+        /// </summary>
         public string Name
         {
             get { return _Name; }
             set { SetProperty(nameof(Name), ref _Name, value); }
         }
 
+        /// <summary>
+        /// Firstname User.
+        /// Getter and Setter for Firstname.
+        /// </summary>
         public string Firstname
         {
             get { return _Firstname; }
             set { SetProperty(nameof(Firstname), ref _Firstname, value); }
         }
 
+        /// <summary>
+        /// Email User.
+        /// Getter and Setter for Email.
+        /// </summary>
         public string Email
         {
             get { return _Email; }
@@ -67,12 +83,20 @@ namespace myQCM.Models
             set { SetProperty(nameof(Password), ref _Password, value); }
         }
 
+        /// <summary>
+        /// CreatedAt User.
+        /// Getter and Setter for CreatedAt.
+        /// </summary>
         public DateTime CreatedAt
         {
             get { return _CreatedAt; }
             set { SetProperty(nameof(CreatedAt), ref _CreatedAt, value); }
         }
 
+        /// <summary>
+        /// UpdatedAt User.
+        /// Getter and Setter for UpdatedAt.
+        /// </summary>
         public DateTime UpdatedAt
         {
             get { return _UpdatedAt; }
