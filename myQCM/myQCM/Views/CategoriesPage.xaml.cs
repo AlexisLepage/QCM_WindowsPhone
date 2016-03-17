@@ -7,15 +7,16 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MVVM.Views;
 
 namespace myQCM.Views
 {
-    public partial class CategoriesPage : PhoneApplicationPage
+    public partial class CategoriesPage : MVVMPhonePage
     {
         public CategoriesPage()
         {
 #if DEBUG
-            this.DataContext = new ViewModels.ViewModelCategories();
+            this.ViewModel = new ViewModels.ViewModelCategories();
 #else
 
 #endif

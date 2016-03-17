@@ -1,5 +1,5 @@
-﻿using MVVM.Interfaces;
-using myQCM.Models;
+﻿using MVVM;
+using MVVM.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace myQCM.ViewModels.Interfaces
 {
-   public interface IViewModelCategories : IViewModelList<Category>
-   {
-
-   }
+    public interface IViewModelConnexion : IViewModel
+    {
+        DelegateCommand ConnectCommand { get; }
+    }
 }
