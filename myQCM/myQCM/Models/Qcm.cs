@@ -1,4 +1,5 @@
 ﻿using MVVM.Data;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +13,28 @@ namespace myQCM.Models
 
         #region Fields
 
+        [JsonProperty(PropertyName = "id")]
         private int _IdServer;
 
         private string _Name;
 
+        [JsonProperty(PropertyName = "beginning_at")]
         private DateTime _BeginningAt;
 
+        [JsonProperty(PropertyName = "finished_at")]
         private DateTime _FinishedAt;
 
         private int _Duration;
 
+        [JsonProperty(PropertyName = "created_at")]
         private DateTime _CreatedAt;
 
+        [JsonProperty(PropertyName = "update_at")]
         private DateTime _UpdatedAt;
 
         private Category _Category;
+
+        private List<UserQcm> _UserQcms;
 
         #endregion
 
@@ -112,11 +120,21 @@ namespace myQCM.Models
             set { SetProperty(nameof(Category), ref _Category, value); }
         }
 
+        /// <summary>
+        /// UserQcms Qcm.
+        /// Getter and Setter for UserQcms.
+        /// </summary>
+        public List<UserQcm> UserQcms
+        {
+            get { return _UserQcms; }
+            set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
+        }
+
         #endregion
 
         #region Constructors
 
-        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category)
+        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, List<UserQcm> user_qcms)
         {
             IdServer = id_server;
             Name = name;
@@ -126,6 +144,11 @@ namespace myQCM.Models
             CreatedAt = created_at;
             UpdatedAt = updated_at;
             Category = category;
+            UserQcms = user_qcms;
+        }
+        public Qcm()
+        {
+
         }
 
         #endregion

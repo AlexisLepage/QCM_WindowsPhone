@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MVVM.Interfaces;
 using myQCM.Models;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace myQCM.ViewModels
 {
@@ -89,10 +91,26 @@ namespace myQCM.ViewModels
 
         protected void ExecuteConnectCommand(object parameter)
         {
-            if (Item.Username.Equals(UserCurrent.Username) && Item.Password.Equals(UserCurrent.Password))
+
+            WebClient webClient = new WebClient();
+            webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
+            webClient.DownloadStringAsync(new Uri("http://localhost/Qcm/web/app_dev.php/api/users/" + Item.Username));
+
+        }
+
+
+        private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+
+            string jsonstream = e.Result;
+
+            User user = JsonConvert.DeserializeObject<User>(jsonstream);
+
+            if (Item.Username.Equals(user.Username))
             {
                 ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
             }
+
         }
 
         #endregion

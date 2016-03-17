@@ -20,7 +20,7 @@ namespace myQCM
         {
 
             DateTime date = DateTime.Now;
-            User u = new User("Alepage","alexislepage@hotmail.fr", "Lepage", "Alexis", date, date, "admin");
+            //User u = new User("Alepage","alexislepage@hotmail.fr", "Lepage", "Alexis", date, date, "admin");
            
             this.ViewModel = new ViewModels.ViewModelConnexion();
 

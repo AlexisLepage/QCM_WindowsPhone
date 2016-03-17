@@ -12,7 +12,8 @@ namespace myQCM.Models
     {
         #region Fields
 
-        private int _Id;
+        [JsonProperty(PropertyName = "id")]
+        private int _IdServer;
 
         private string _Username;
 
@@ -23,19 +24,28 @@ namespace myQCM.Models
         private string _Email;
 
         private string _Password;
-
+        
+        [JsonProperty(PropertyName = "created_at")]
         private DateTime _CreatedAt;
 
+        [JsonProperty(PropertyName = "update_at")]
         private DateTime _UpdatedAt;
+        
+        [JsonProperty(PropertyName = "user_qcms")]
+        private List<UserQcm> _UserQcms;
 
         #endregion
 
         #region Properties
 
-        public int Id
+        /// <summary>
+        /// IdServer User.
+        /// Getter and Setter for IdServer.
+        /// </summary>
+        public int IdServer
         {
-            get { return _Id; }
-            set { SetProperty(nameof(Id), ref _Id, value); }
+            get { return _IdServer; }
+            set { SetProperty(nameof(IdServer), ref _IdServer, value); }
         }
 
         /// <summary>
@@ -103,11 +113,21 @@ namespace myQCM.Models
             get { return _UpdatedAt; }
             set { SetProperty(nameof(UpdatedAt), ref _UpdatedAt, value); }
         }
+
+        /// <summary>
+        /// UpdatedAt User.
+        /// Getter and Setter for UpdatedAt.
+        /// </summary>
+        public List<UserQcm> UserQcms
+        {
+            get { return _UserQcms; }
+            set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
+        }
         #endregion
 
         #region Constructors
 
-        public User(string username, string email, string name, string firstname, DateTime created_at, DateTime updated_at, string password)
+        public User(string username, string email, string name, string firstname, DateTime created_at, DateTime updated_at, string password, List<UserQcm> user_qcms)
         {
             Username = username;
             Email = email;
@@ -116,6 +136,12 @@ namespace myQCM.Models
             Firstname = firstname;
             CreatedAt = created_at;
             UpdatedAt = updated_at;
+            UserQcms = user_qcms;
+        }
+
+        public User()
+        {
+
         }
 
         #endregion

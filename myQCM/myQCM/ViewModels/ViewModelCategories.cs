@@ -46,7 +46,7 @@ namespace myQCM.ViewModels
         {
             string jsonstream = e.Result;
 
-            User[] user = JsonConvert.DeserializeObject<User[]>(jsonstream);
+            List<User> user = JsonConvert.DeserializeObject<List<User>>(jsonstream);
 
             System.Threading.Thread.Sleep(5000);
 

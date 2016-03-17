@@ -1,4 +1,5 @@
 ﻿using MVVM.Data;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace myQCM.Models
 
         #region Fields
 
+        [JsonProperty(PropertyName = "id")]
         private int _IdServer;
 
         private bool _IsDone;
