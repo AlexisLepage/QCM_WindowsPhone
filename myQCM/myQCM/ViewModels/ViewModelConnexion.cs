@@ -106,6 +106,7 @@ namespace myQCM.ViewModels
 
             User user = JsonConvert.DeserializeObject<User>(jsonstream);
 
+            //List
             if (Item.Username.Equals(user.Username))
             {
                 ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
