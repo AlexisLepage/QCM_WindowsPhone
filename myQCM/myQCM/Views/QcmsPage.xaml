@@ -24,8 +24,8 @@
 
         <!--TitlePanel contient le nom de l'application et le titre de la page-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MON APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="nom de la page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <TextBlock Text="My QCM" Style="{StaticResource PhoneTextNormalStyle}"/>
+        <TextBlock Text="Qcms" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
@@ -37,6 +37,7 @@
       </Grid.RowDefinitions>
 
       <ListBox ItemsSource="{Binding ItemsSource}"
+               DataContext="{Binding ViewModelQcms}"
                SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
                Style="{StaticResource HorizontalListBoxStyle}"
                ItemTemplate="{StaticResource QcmTemplate}"/>

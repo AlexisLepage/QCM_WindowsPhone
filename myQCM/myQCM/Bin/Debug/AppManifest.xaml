@@ -2,6 +2,5 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="myQCM" Source="myQCM.dll" />
     <AssemblyPart x:Name="MVVM" Source="MVVM.dll" />
-    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
   </Deployment.Parts>
 </Deployment>

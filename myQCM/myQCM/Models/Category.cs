@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace myQCM.Models
 
         [JsonProperty(PropertyName = "updated_at")]
         private DateTime _UpdatedAt;
+
+        private ObservableCollection<Qcm> qcms;
 
         #endregion
 
@@ -68,16 +71,27 @@ namespace myQCM.Models
             set { SetProperty(nameof(UpdatedAt), ref _UpdatedAt, value); }
         }
 
+        /// <summary>
+        /// Qcms Category
+        /// Getter and Setter for Qcms
+        /// </summary>
+        public ObservableCollection<Qcm> Qcms
+        {
+            get { return qcms; }
+            set { qcms = value; }
+        }
+
         #endregion
 
         #region Constructors
 
-        public Category(int id_server, string name, DateTime created_at, DateTime updated_at)
+        public Category(int id_server, string name, DateTime created_at, DateTime updated_at, ObservableCollection<Qcm> qcms = null)
         {
             Name = name;
             IdServer = id_server;
             CreatedAt = created_at;
             UpdatedAt = updated_at;
+            Qcms = new ObservableCollection<Qcm>();
         }
 
         #endregion

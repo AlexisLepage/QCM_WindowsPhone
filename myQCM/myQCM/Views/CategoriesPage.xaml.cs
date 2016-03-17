@@ -15,12 +15,12 @@ namespace myQCM.Views
     {
         public CategoriesPage()
         {
+            InitializeComponent();
 #if DEBUG
             this.ViewModel = new ViewModels.ViewModelCategories();
 #else
 
 #endif
-            InitializeComponent();
         }
     }
 }

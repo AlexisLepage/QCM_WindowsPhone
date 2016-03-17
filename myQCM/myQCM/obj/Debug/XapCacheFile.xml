@@ -1,31 +1,23 @@
-﻿<xapCache source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\myQCM_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="17/03/2016 11:25:07">
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="16/03/2016 16:18:10" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\myQCM.dll" archivePath="myQCM.dll" lastWriteTime="17/03/2016 11:25:06" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\SplashScreen.png" archivePath="Assets\SplashScreen.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\SquareTile150x150.png" archivePath="Assets\SquareTile150x150.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\SquareTile71x71.png" archivePath="Assets\SquareTile71x71.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\StoreLogo.png" archivePath="Assets\StoreLogo.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\WideLogo.png" archivePath="Assets\WideLogo.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="16/03/2016 16:18:11" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="16/03/2016 15:16:37" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\MVVM\Bin\Debug\MVVM.dll" archivePath="MVVM.dll" lastWriteTime="16/03/2016 14:47:35" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="16/03/2016 16:07:01" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.xml" archivePath="Newtonsoft.Json.xml" lastWriteTime="16/03/2016 16:07:01" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="15/03/2016 15:19:03" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="16/03/2016 15:52:25" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="17/03/2016 11:25:07" />
-  <file source="D:\Licence CDSM\WINDOWS PHONE\Projet QCM\Qcm_WindowsPhone\myQCM\myQCM\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="16/03/2016 16:18:10" />
+﻿<xapCache source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\myQCM_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="16/03/2016 10:18:58">
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="16/03/2016 10:17:42" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\myQCM.dll" archivePath="myQCM.dll" lastWriteTime="16/03/2016 10:18:58" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\SplashScreen.png" archivePath="Assets\SplashScreen.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\SquareTile150x150.png" archivePath="Assets\SquareTile150x150.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\SquareTile71x71.png" archivePath="Assets\SquareTile71x71.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\StoreLogo.png" archivePath="Assets\StoreLogo.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\WideLogo.png" archivePath="Assets\WideLogo.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="15/03/2016 16:09:42" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="15/03/2016 15:17:17" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\MVVM\Bin\Debug\MVVM.dll" archivePath="MVVM.dll" lastWriteTime="15/03/2016 13:55:04" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="15/03/2016 16:09:42" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="16/03/2016 10:18:58" />
+  <file source="C:\Users\gemax\OneDrive\Documents\Visual Studio 2015\Projects\myQCM\myQCM\myQCM\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="16/03/2016 10:17:42" />
 </xapCache>
