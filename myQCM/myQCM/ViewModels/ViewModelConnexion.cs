@@ -84,7 +84,7 @@ namespace myQCM.ViewModels
 
         protected bool CanExecuteConnectCommand(object parameter)
         {
-            return !string.IsNullOrWhiteSpace(Item.Username);
+            return !string.IsNullOrWhiteSpace(Item.Username) && !string.IsNullOrWhiteSpace(Item.Password);
         }
 
         protected void ExecuteConnectCommand(object parameter)
