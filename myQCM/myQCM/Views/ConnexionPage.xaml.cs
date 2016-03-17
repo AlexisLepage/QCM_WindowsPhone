@@ -9,24 +9,20 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using myQCM.Resources;
 using myQCM.Models;
+using MVVM.Views;
 
 namespace myQCM
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : MVVMPhonePage
     {
         // Constructeur
         public MainPage()
         {
             InitializeComponent();
 
-            User u = new User();
             DateTime date = DateTime.Now;
-            u.Name = "Lepage";
-            u.Firstname = "Alexis";
-            u.Password = "passw0rd";
-            u.Email = "alexis.lepage@hotmail.fr";
-            u.CreatedAt = date;
-            u.UpdatedAt = date;
+            User u = new User("Alepage","alexislepage@hotmail.fr", "Lepage", "Alexis", date, date, "admin");
+           
 
             // Exemple de code pour la localisation d'ApplicationBar
             //BuildLocalizedApplicationBar();
