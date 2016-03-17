@@ -1,3 +1,4 @@
+﻿using Newtonsoft.Json;
 ﻿using MVVM.Data;
 using System;
 using System.Collections.Generic;
@@ -106,9 +107,15 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public User()
+        public User(string username, string email, string name, string firstname, DateTime created_at, DateTime updated_at, string password)
         {
-
+            Username = username;
+            Email = email;
+            Password = password;
+            Name = name;
+            Firstname = firstname;
+            CreatedAt = created_at;
+            UpdatedAt = updated_at;
         }
 
         #endregion

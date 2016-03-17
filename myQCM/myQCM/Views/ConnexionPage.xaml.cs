@@ -19,6 +19,9 @@ namespace myQCM
         public MainPage()
         {
 
+            DateTime date = DateTime.Now;
+            User u = new User("Alepage","alexislepage@hotmail.fr", "Lepage", "Alexis", date, date, "admin");
+           
             this.ViewModel = new ViewModels.ViewModelConnexion();
 
             InitializeComponent();
