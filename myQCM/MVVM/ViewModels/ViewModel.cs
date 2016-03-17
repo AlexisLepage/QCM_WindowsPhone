@@ -29,7 +29,10 @@ namespace MVVM.ViewModels
 
         #region Methods
 
-        public abstract void LoadData();
+        public virtual void LoadData()
+        {
+
+        }
 
         public virtual void OnNavigatedFrom(IViewModel viewModel)
         {

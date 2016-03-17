@@ -9,12 +9,12 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using MVVM.Interfaces;
 
 namespace myQCM.ViewModels
 {
-    class ViewModelCategories : ViewModelList<Category>, IViewModelCategories
-    {
-
+   public class ViewModelCategories : ViewModelList<Category>, IViewModelCategories
+   {
         #region Constructors
 
         public ViewModelCategories()

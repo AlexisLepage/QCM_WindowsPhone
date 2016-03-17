@@ -95,12 +95,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
-    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Question.cs" />
-    <Compile Include="Models\Qcm.cs" />
+    <Compile Include="Models\Group.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserQcm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -108,17 +105,14 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Interfaces\IViewModelCategories.cs" />
-    <Compile Include="ViewModels\Interfaces\IViewModelQcms.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelConnexion.cs" />
     <Compile Include="ViewModels\ViewModelCategories.cs" />
-    <Compile Include="ViewModels\ViewModelQcms.cs" />
+    <Compile Include="ViewModels\ViewModelConnexion.cs" />
     <Compile Include="Views\CategoriesPage.xaml.cs">
       <DependentUpon>CategoriesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConnexionPage.xaml.cs">
       <DependentUpon>ConnexionPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\QcmsPage.xaml.cs">
-      <DependentUpon>QcmsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -131,10 +125,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ConnexionPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\QcmsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

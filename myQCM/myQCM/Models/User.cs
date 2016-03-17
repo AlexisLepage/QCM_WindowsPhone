@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+﻿using MVVM.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace myQCM.Models
 {
-    public class User
+    public class User: ObservableObject
     {
         #region Fields
+
+        private int _Id;
 
         private string _Username;
 
@@ -29,6 +32,12 @@ namespace myQCM.Models
 
         #region Properties
 
+        public int Id
+        {
+            get { return _Id; }
+            set { SetProperty(nameof(Id), ref _Id, value); }
+        }
+
         /// <summary>
         /// Username User.
         /// Getter and Setter for Username.
@@ -36,7 +45,7 @@ namespace myQCM.Models
         public string Username
         {
             get { return _Username; }
-            set { _Username = value; }
+            set { SetProperty(nameof(Username), ref _Username, value); }
         }
 
         /// <summary>
@@ -46,7 +55,7 @@ namespace myQCM.Models
         public string Name
         {
             get { return _Name; }
-            set { _Name = value; }
+            set { SetProperty(nameof(Name), ref _Name, value); }
         }
 
         /// <summary>
@@ -56,7 +65,7 @@ namespace myQCM.Models
         public string Firstname
         {
             get { return _Firstname; }
-            set { _Firstname = value; }
+            set { SetProperty(nameof(Firstname), ref _Firstname, value); }
         }
 
         /// <summary>
@@ -66,13 +75,13 @@ namespace myQCM.Models
         public string Email
         {
             get { return _Email; }
-            set { _Email = value; }
+            set { SetProperty(nameof(Email), ref _Email, value); }
         }
 
         public string Password
         {
             get { return _Password; }
-            set { _Password = value; }
+            set { SetProperty(nameof(Password), ref _Password, value); }
         }
 
         /// <summary>
@@ -82,7 +91,7 @@ namespace myQCM.Models
         public DateTime CreatedAt
         {
             get { return _CreatedAt; }
-            set { _CreatedAt = value; }
+            set { SetProperty(nameof(CreatedAt), ref _CreatedAt, value); }
         }
 
         /// <summary>
@@ -92,7 +101,7 @@ namespace myQCM.Models
         public DateTime UpdatedAt
         {
             get { return _UpdatedAt; }
-            set { _UpdatedAt = value; }
+            set { SetProperty(nameof(UpdatedAt), ref _UpdatedAt, value); }
         }
         #endregion
 
