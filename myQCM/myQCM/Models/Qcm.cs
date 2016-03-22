@@ -134,7 +134,7 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, List<UserQcm> user_qcms)
+        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category)
         {
             IdServer = id_server;
             Name = name;
@@ -144,7 +144,6 @@ namespace myQCM.Models
             CreatedAt = created_at;
             UpdatedAt = updated_at;
             Category = category;
-            UserQcms = user_qcms;
         }
         public Qcm()
         {

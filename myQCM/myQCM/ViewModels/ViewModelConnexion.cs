@@ -71,6 +71,18 @@ namespace myQCM.ViewModels
             Item.PropertyChanged += Item_PropertyChanged;
         }
 
+        public override void OnNavigatedFrom(IViewModel viewModel)
+        {
+            base.OnNavigatedTo(viewModel);
+
+            if (viewModel is IViewModelCategories)
+            {
+                ((IViewModelCategories)viewModel).User = this.Item;
+                ((IViewModelCategories)viewModel).LoadData();
+                Item = null;
+            }
+        }
+
         private void Item_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)
@@ -91,23 +103,21 @@ namespace myQCM.ViewModels
 
         protected void ExecuteConnectCommand(object parameter)
         {
-
             WebClient webClient = new WebClient();
             webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
-            webClient.DownloadStringAsync(new Uri("http://localhost/Qcm/web/app_dev.php/api/users/" + Item.Username));
+            webClient.DownloadStringAsync(new Uri("http://172.20.10.2/myQCM/web/app_dev.php/api/users/" + Item.Username));
 
         }
-
 
         private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
 
             string jsonstream = e.Result;
 
-            User user = JsonConvert.DeserializeObject<User>(jsonstream);
+            this.Item = JsonConvert.DeserializeObject<User>(jsonstream);
 
-            //List
-            if (Item.Username.Equals(user.Username))
+            //Redirection vers page catégorie
+            if (Item.Username.Equals(Item.Username))
             {
                 ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
             }

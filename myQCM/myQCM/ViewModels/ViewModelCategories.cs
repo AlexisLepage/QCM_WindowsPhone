@@ -17,20 +17,43 @@ namespace myQCM.ViewModels
 {
    public class ViewModelCategories : ViewModelList<Category>, IViewModelCategories
    {
+        #region Fields
+
+        private User _User;
+
+        #endregion
+
+        #region Properties
+
+        public User User
+        {
+            get { return _User; }
+            set { _User = value; }
+        }
+
+        #endregion
+
         #region Methods
 
         public override void LoadData()
         {
-            DateTime date = new DateTime();
-            Category catAndroid = new Category(3, "Android", date, date);
-            Qcm qcm = new Qcm(1, "Les fragments", date, date, 30, date, date, catAndroid);
-            catAndroid.Qcms.Add(qcm);
-            this.ItemsSource.Add(catAndroid);
+            //DateTime date = new DateTime();
+            //Category catAndroid = new Category(3, "Android", date, date);
+            //Qcm qcm = new Qcm(1, "Les fragments", date, date, 30, date, date, catAndroid);
+            //catAndroid.Qcms.Add(qcm);
+            //this.ItemsSource.Add(catAndroid);
             //this.ItemsSource.Add(new Category(2, "IOS", date, date));
             //this.ItemsSource.Add(catAndroid);
             //this.ItemsSource.Add(new Category(4, "Sécurité", date, date));
             //this.ItemsSource.Add(new Category(5, "UML", date, date));
             //this.ItemsSource.Add(new Category(6, "Veille technologique", date, date));
+            ObservableCollection<Category> categories = new ObservableCollection<Category>();
+            foreach (UserQcm userQcm in this.User.UserQcms)
+            {
+                categories.Add(userQcm.Qcm.Category);
+            }
+
+            this.ItemsSource = categories;
         }
 
         protected override void InitializePropertyTrackers()
@@ -72,5 +95,5 @@ namespace myQCM.ViewModels
         #endregion
 
         #endregion
-    }
+   }
 }
