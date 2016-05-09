@@ -36,6 +36,8 @@ namespace myQCM.Models
 
         private List<UserQcm> _UserQcms;
 
+        private List<Question> questions;
+
         #endregion
 
         #region Properties
@@ -130,11 +132,21 @@ namespace myQCM.Models
             set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
         }
 
+        /// <summary>
+        /// Qcms Category
+        /// Getter and Setter for Qcms
+        /// </summary>
+        public List<Question> Questions
+        {
+            get { return questions; }
+            set { questions = value; }
+        }
+
         #endregion
 
         #region Constructors
 
-        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category)
+        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, List<UserQcm> user_qcms, List<Question> questions)
         {
             IdServer = id_server;
             Name = name;
@@ -144,6 +156,8 @@ namespace myQCM.Models
             CreatedAt = created_at;
             UpdatedAt = updated_at;
             Category = category;
+            UserQcms = user_qcms;
+            Questions = questions;
         }
         public Qcm()
         {

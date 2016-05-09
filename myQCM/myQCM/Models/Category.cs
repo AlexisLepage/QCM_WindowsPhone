@@ -25,7 +25,7 @@ namespace myQCM.Models
         [JsonProperty(PropertyName = "updated_at")]
         private DateTime _UpdatedAt;
 
-        private ObservableCollection<Qcm> qcms;
+        private List<Qcm> qcms;
 
         #endregion
 
@@ -75,7 +75,7 @@ namespace myQCM.Models
         /// Qcms Category
         /// Getter and Setter for Qcms
         /// </summary>
-        public ObservableCollection<Qcm> Qcms
+        public List<Qcm> Qcms
         {
             get { return qcms; }
             set { qcms = value; }
@@ -85,13 +85,13 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public Category(int id_server, string name, DateTime created_at, DateTime updated_at, ObservableCollection<Qcm> qcms = null)
+        public Category(int id_server, string name, DateTime created_at, DateTime updated_at, List<Qcm> qcms)
         {
             Name = name;
             IdServer = id_server;
             CreatedAt = created_at;
             UpdatedAt = updated_at;
-            Qcms = new ObservableCollection<Qcm>();
+            Qcms = qcms;
         }
 
         #endregion

@@ -1,0 +1,40 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="myQCM.Views.QuestionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+  <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+  <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <!--TitlePanel contient le nom de l'application et le titre de la page-->
+    <StackPanel Grid.Row="0" Margin="12,17,0,0">
+      <TextBlock Text="My QCM" Style="{StaticResource PhoneTextNormalStyle}"/>
+    </StackPanel>
+    <Grid HorizontalAlignment="Left" Height="719" Margin="0,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="480">
+      <StackPanel HorizontalAlignment="Left" Height="637" VerticalAlignment="Top" Width="480">
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Intitulé" Height="146" HorizontalAlignment="Center" Width="480"/>
+        <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Center"/>
+        <RadioButton x:Name="radioButton_Copy" Content="RadioButton" HorizontalAlignment="Center"/>
+        <RadioButton x:Name="radioButton_Copy1" Content="RadioButton" HorizontalAlignment="Center"/>
+        <RadioButton x:Name="radioButton_Copy2" Content="RadioButton" HorizontalAlignment="Center"/>
+      </StackPanel>
+      <Button x:Name="button" Content="Précédent" HorizontalAlignment="Left" Margin="10,641,0,0" VerticalAlignment="Top" Width="225" Click="button_Click"/>
+      <Button x:Name="button_Copy" Content="Suivant" HorizontalAlignment="Left" Margin="255,641,0,0" VerticalAlignment="Top" Width="225"/>
+    </Grid>
+  </Grid>
+
+</phone:PhoneApplicationPage>

@@ -12,27 +12,27 @@ using System.Threading.Tasks;
 
 namespace myQCM.ViewModels
 {
-    public class ViewModelQcms : ViewModelList<Qcm>, IViewModelQcms
+    public class ViewModelQuestion : ViewModelList<Question>, IViewModelQuestion
     {
         #region Fields
 
-        private Category _Category;
+        private Qcm _Qcm;
 
         #endregion
 
         #region Properties
 
-        public Category Category
+        public Qcm Qcm
         {
-            get { return _Category; }
-            set { SetProperty(nameof(Category), ref _Category, value); }
+            get { return _Qcm; }
+            set { SetProperty(nameof(Qcm), ref _Qcm, value); }
         }
 
         #endregion
 
         #region Constructors
 
-        public ViewModelQcms()
+        public ViewModelQuestion()
         {
         }
 
@@ -42,22 +42,15 @@ namespace myQCM.ViewModels
 
         public override void LoadData()
         {
-            //DateTime date = new DateTime();
-            //Category category1 = new Category(1, "Windows Phone", date, date);
-            //Category category2 = new Category(2, "Android", date, date);
-            //this.ItemsSource.Add(new Qcm(1, "Le Binding", date, date, 30, date, date, category1));
-            //this.ItemsSource.Add(new Qcm(2, "Le XAML", date, date, 60, date, date, category1));
-            //this.ItemsSource.Add(new Qcm(3, "La navigation au sein des views", date, date, 20, date, date, category2));
-            //this.ItemsSource.Add(new Qcm(4, "Test ", date, date, 45, date, date, category2));
+          
+            ObservableCollection<Question> questions = new ObservableCollection<Question>();
 
-            ObservableCollection<Qcm> qcms = new ObservableCollection<Qcm>();
-
-            foreach (Qcm qcm in this.Category.Qcms)
+            foreach (Question question in this.Qcm.Questions)
             {
-                qcms.Add(qcm);
+                questions.Add(question);
             }
 
-            this.ItemsSource = qcms;
+            this.ItemsSource = questions;
         }
 
         protected override void InitializePropertyTrackers()
@@ -99,5 +92,7 @@ namespace myQCM.ViewModels
         #endregion
 
         #endregion
+
+
     }
 }

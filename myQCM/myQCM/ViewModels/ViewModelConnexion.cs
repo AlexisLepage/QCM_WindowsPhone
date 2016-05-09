@@ -105,7 +105,7 @@ namespace myQCM.ViewModels
         {
             WebClient webClient = new WebClient();
             webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
-            webClient.DownloadStringAsync(new Uri("http://172.20.10.2/myQCM/web/app_dev.php/api/users/" + Item.Username));
+            webClient.DownloadStringAsync(new Uri("http://192.168.208.43/Qcm/web/app_dev.php/api/users/" + Item.Username));
         }
 
         private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
