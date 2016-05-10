@@ -10,6 +10,6 @@ namespace myQCM.ViewModels.Interfaces
 {
     public interface IViewModelQcm : IViewModelItem<Qcm>
     {
-        IViewModelQuestion ViewModelQuestion { get; }
+        IViewModelQuestions ViewModelQuestions { get; }
     }
 }

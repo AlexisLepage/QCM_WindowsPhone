@@ -32,7 +32,7 @@
         <RadioButton x:Name="radioButton_Copy1" Content="RadioButton" HorizontalAlignment="Center"/>
         <RadioButton x:Name="radioButton_Copy2" Content="RadioButton" HorizontalAlignment="Center"/>
       </StackPanel>
-      <Button x:Name="button" Content="Précédent" HorizontalAlignment="Left" Margin="10,641,0,0" VerticalAlignment="Top" Width="225" Click="button_Click"/>
+      <Button x:Name="button" Content="Précédent" HorizontalAlignment="Left" Margin="10,641,0,0" VerticalAlignment="Top" Width="225"/>
       <Button x:Name="button_Copy" Content="Suivant" HorizontalAlignment="Left" Margin="255,641,0,0" VerticalAlignment="Top" Width="225"/>
     </Grid>
   </Grid>

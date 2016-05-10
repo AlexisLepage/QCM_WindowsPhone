@@ -12,87 +12,31 @@ using System.Threading.Tasks;
 
 namespace myQCM.ViewModels
 {
-    public class ViewModelQuestion : ViewModelList<Question>, IViewModelQuestion
+    public class ViewModelQuestion : ViewModelItem<Question>, IViewModelQuestion
     {
         #region Fields
 
-        private Qcm _Qcm;
+
 
         #endregion
 
         #region Properties
 
-        public Qcm Qcm
-        {
-            get { return _Qcm; }
-            set { SetProperty(nameof(Qcm), ref _Qcm, value); }
-        }
+        
 
         #endregion
 
         #region Constructors
 
-        public ViewModelQuestion()
-        {
-        }
+
 
         #endregion
 
         #region Methods
 
-        public override void LoadData()
-        {
-          
-            ObservableCollection<Question> questions = new ObservableCollection<Question>();
-
-            foreach (Question question in this.Qcm.Questions)
-            {
-                questions.Add(question);
-            }
-
-            this.ItemsSource = questions;
-        }
-
-        protected override void InitializePropertyTrackers()
-        {
-            base.InitializePropertyTrackers();
-
-            this.AddPropertyTrackerAction(nameof(SelectedItem), (sender, args) =>
-            {
-                if (SelectedItem != null)
-                {
-                    ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/QuestionsPage.xaml", UriKind.Relative));
-                }
-            });
-        }
-
-        #region Navigation
-
-        public override void OnNavigatedTo(IViewModel viewModel)
-        {
-            base.OnNavigatedTo(viewModel);
-
-            //Chargement des données
-            LoadData();
-        }
-
-        public override void OnNavigatedFrom(IViewModel viewModel)
-        {
-            base.OnNavigatedFrom(viewModel);
-
-            if (viewModel is IViewModelQuestion)
-            {
-                ((IViewModelQuestion)viewModel).Item = this.SelectedItem;
-                ((IViewModelQuestion)viewModel).LoadData();
-                SelectedItem = null;
-            }
-        }
 
 
         #endregion
-
-        #endregion
-
 
     }
 }

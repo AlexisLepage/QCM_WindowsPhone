@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace myQCM.ViewModels.Interfaces
 {
-    public interface IViewModelQuestion : IViewModelItem<Question>
+    public interface IViewModelAnswers : IViewModelList<Answer>
     {
-       
+        Question Question { get; set; }
     }
 }

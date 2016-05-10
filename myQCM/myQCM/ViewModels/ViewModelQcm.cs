@@ -13,13 +13,13 @@ namespace myQCM.ViewModels
     {
         #region Fields
 
-        private ViewModelQuestion _ViewModelQuestion;
+        private ViewModelQuestions _ViewModelQuestions;
 
         #endregion
 
         #region Properties
 
-        public IViewModelQuestion ViewModelQuestion => _ViewModelQuestion;
+        public IViewModelQuestions ViewModelQuestions => _ViewModelQuestions;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace myQCM.ViewModels
 
         public ViewModelQcm()
         {
-            _ViewModelQuestion = new ViewModelQuestion();
+            _ViewModelQuestions = new ViewModelQuestions();
         }
 
         #endregion
@@ -36,8 +36,8 @@ namespace myQCM.ViewModels
 
         public override void LoadData()
         {
-            _ViewModelQuestion.Qcm = Item;
-            _ViewModelQuestion.LoadData();
+            _ViewModelQuestions.Qcm = Item;
+            _ViewModelQuestions.LoadData();
         }
 
         #endregion

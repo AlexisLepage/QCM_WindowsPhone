@@ -108,18 +108,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Interfaces\IViewModelAnswer.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelAnswers.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelCategories.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelCategory.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelConnexion.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQcm.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQcms.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQuestion.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelQuestions.cs" />
+    <Compile Include="ViewModels\ViewModelAnswer.cs" />
+    <Compile Include="ViewModels\ViewModelAnswers.cs" />
     <Compile Include="ViewModels\ViewModelCategories.cs" />
     <Compile Include="ViewModels\ViewModelCategory.cs" />
     <Compile Include="ViewModels\ViewModelConnexion.cs" />
     <Compile Include="ViewModels\ViewModelQcm.cs" />
     <Compile Include="ViewModels\ViewModelQcms.cs" />
     <Compile Include="ViewModels\ViewModelQuestion.cs" />
+    <Compile Include="ViewModels\ViewModelQuestions.cs" />
     <Compile Include="Views\CategoriesPage.xaml.cs">
       <DependentUpon>CategoriesPage.xaml</DependentUpon>
     </Compile>
