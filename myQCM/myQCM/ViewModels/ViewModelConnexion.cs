@@ -11,6 +11,7 @@ using MVVM.Interfaces;
 using myQCM.Models;
 using System.Net;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace myQCM.ViewModels
 {
@@ -47,16 +48,6 @@ namespace myQCM.ViewModels
             LoadData();
 
             _ConnectCommand = new DelegateCommand(ExecuteConnectCommand, CanExecuteConnectCommand);
-
-            UserCurrent = new User();
-            DateTime date = DateTime.Now;
-            UserCurrent.Username = "test";
-            UserCurrent.Name = "test";
-            UserCurrent.Firstname = "test";
-            UserCurrent.Password = "passw0rd";
-            UserCurrent.Email = "test@hotmail.fr";
-            UserCurrent.CreatedAt = date;
-            UserCurrent.UpdatedAt = date;
         }
 
         #endregion
@@ -77,7 +68,7 @@ namespace myQCM.ViewModels
 
             if (viewModel is IViewModelCategories)
             {
-                ((IViewModelCategories)viewModel).User = this.Item;
+                ((IViewModelCategories)viewModel).User = UserCurrent;
                 ((IViewModelCategories)viewModel).LoadData();
                 Item = null;
             }
@@ -105,18 +96,17 @@ namespace myQCM.ViewModels
         {
             WebClient webClient = new WebClient();
             webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
-            webClient.DownloadStringAsync(new Uri("http://172.20.10.2/myQCM/web/app_dev.php/api/users/" + Item.Username));
+            webClient.DownloadStringAsync(new Uri("http://192.168.100.172/myQCM/web/app_dev.php/api/users/" + Item.Username));
         }
 
         private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-
             string jsonstream = e.Result;
 
-            this.Item = JsonConvert.DeserializeObject<User>(jsonstream);
+           UserCurrent = JsonConvert.DeserializeObject<User>(jsonstream);
 
             //Redirection vers page catégorie
-            if (Item.Username.Equals(Item.Username))
+            if (UserCurrent != null)
             {
                 ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
             }

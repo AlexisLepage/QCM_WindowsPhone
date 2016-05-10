@@ -37,22 +37,29 @@ namespace myQCM.ViewModels
 
         public override void LoadData()
         {
-            //DateTime date = new DateTime();
-            //Category catAndroid = new Category(3, "Android", date, date);
-            //Qcm qcm = new Qcm(1, "Les fragments", date, date, 30, date, date, catAndroid);
-            //catAndroid.Qcms.Add(qcm);
-            //this.ItemsSource.Add(catAndroid);
-            //this.ItemsSource.Add(new Category(2, "IOS", date, date));
-            //this.ItemsSource.Add(catAndroid);
-            //this.ItemsSource.Add(new Category(4, "Sécurité", date, date));
-            //this.ItemsSource.Add(new Category(5, "UML", date, date));
-            //this.ItemsSource.Add(new Category(6, "Veille technologique", date, date));
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
+
+            //Teste si la catégorie est déja dans la liste des catégories puis ajoute si ce n'est pas le cas
+            // A VOIR AVEC LA METHODE CONTAINS
+            bool exist = false;
             foreach (UserQcm userQcm in this.User.UserQcms)
             {
-                categories.Add(userQcm.Qcm.Category);
+                Category category = userQcm.Qcm.Category;
+                exist = false;
+                foreach (Category c in categories)
+                {
+                    if (c.IdServer.Equals(category.IdServer))
+                    {
+                        c.Qcms.Add(userQcm.Qcm);
+                        exist = true;
+                    }
+                }
+                if (!exist)
+                {
+                    category.Qcms.Add(userQcm.Qcm);   
+                    categories.Add(category);
+                }
             }
-
             this.ItemsSource = categories;
         }
 
@@ -74,9 +81,6 @@ namespace myQCM.ViewModels
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
-
-            //Chargement des données
-            LoadData();
         }
 
         public override void OnNavigatedFrom(IViewModel viewModel)

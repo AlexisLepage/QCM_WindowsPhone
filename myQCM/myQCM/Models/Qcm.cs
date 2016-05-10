@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,10 @@ namespace myQCM.Models
 
         private string _Name;
 
-        [JsonProperty(PropertyName = "beginning_at")]
+        [JsonProperty(PropertyName = "start_date")]
         private DateTime _BeginningAt;
 
-        [JsonProperty(PropertyName = "finished_at")]
+        [JsonProperty(PropertyName = "end_date")]
         private DateTime _FinishedAt;
 
         private int _Duration;
@@ -29,12 +30,12 @@ namespace myQCM.Models
         [JsonProperty(PropertyName = "created_at")]
         private DateTime _CreatedAt;
 
-        [JsonProperty(PropertyName = "update_at")]
+        [JsonProperty(PropertyName = "updated_at")]
         private DateTime _UpdatedAt;
 
         private Category _Category;
 
-        private List<UserQcm> _UserQcms;
+        //private ObservableCollection<UserQcm> _UserQcms;
 
         #endregion
 
@@ -124,11 +125,11 @@ namespace myQCM.Models
         /// UserQcms Qcm.
         /// Getter and Setter for UserQcms.
         /// </summary>
-        public List<UserQcm> UserQcms
-        {
-            get { return _UserQcms; }
-            set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
-        }
+        //public ObservableCollection<UserQcm> UserQcms
+        //{
+        //    get { return _UserQcms; }
+        //    set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
+        //}
 
         #endregion
 
