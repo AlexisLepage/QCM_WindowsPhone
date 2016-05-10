@@ -108,14 +108,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Interfaces\IViewModelAnswer.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelAnswers.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelCategories.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelCategory.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelConnexion.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelQcm.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQcms.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelQuestion.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelQuestions.cs" />
+    <Compile Include="ViewModels\ViewModelAnswer.cs" />
+    <Compile Include="ViewModels\ViewModelAnswers.cs" />
     <Compile Include="ViewModels\ViewModelCategories.cs" />
     <Compile Include="ViewModels\ViewModelCategory.cs" />
     <Compile Include="ViewModels\ViewModelConnexion.cs" />
+    <Compile Include="ViewModels\ViewModelQcm.cs" />
     <Compile Include="ViewModels\ViewModelQcms.cs" />
+    <Compile Include="ViewModels\ViewModelQuestion.cs" />
+    <Compile Include="ViewModels\ViewModelQuestions.cs" />
     <Compile Include="Views\CategoriesPage.xaml.cs">
       <DependentUpon>CategoriesPage.xaml</DependentUpon>
     </Compile>
@@ -124,6 +134,9 @@
     </Compile>
     <Compile Include="Views\QcmsPage.xaml.cs">
       <DependentUpon>QcmsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuestionsPage.xaml.cs">
+      <DependentUpon>QuestionsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +155,10 @@
     <Page Include="Views\QcmsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QuestionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -198,7 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
