@@ -11,6 +11,6 @@ namespace myQCM.ViewModels.Interfaces
 {
     public interface IViewModelQcms : IViewModelList<Qcm>
     {
-
+        Category Category { get; set; }
     }
 }

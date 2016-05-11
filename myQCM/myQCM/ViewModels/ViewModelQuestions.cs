@@ -18,6 +18,15 @@ namespace myQCM.ViewModels
 
         private Qcm _Qcm;
 
+        private Question _Question;
+
+        public Question Question
+        {
+            get { return _Question; }
+            set { SetProperty(nameof(Question), ref _Question, value); }
+        }
+
+
         #endregion
 
         #region Properties
@@ -30,23 +39,19 @@ namespace myQCM.ViewModels
 
         #endregion
 
-
-        #region Constructors
-
-        public ViewModelQuestions()
-        {
-
-        }
-
-        #endregion
-
         #region Methods
-
         public override void LoadData()
         {
             ObservableCollection<Question> questions = new ObservableCollection<Question>();
 
+            foreach (Question question in this.Qcm.Questions)
+            {
+                questions.Add(question);
+            }
+
             this.ItemsSource = questions;
+
+            this.Question = questions.First();
         }
 
         protected override void InitializePropertyTrackers()
@@ -67,9 +72,6 @@ namespace myQCM.ViewModels
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
-
-            //Chargement des données
-            LoadData();
         }
 
         public override void OnNavigatedFrom(IViewModel viewModel)
@@ -78,7 +80,7 @@ namespace myQCM.ViewModels
 
             if (viewModel is IViewModelQuestion)
             {
-                ((IViewModelQuestion)viewModel).Item = this.SelectedItem;
+                ((IViewModelQuestion)viewModel).Item = this.ItemsSource.First();
                 ((IViewModelQuestion)viewModel).LoadData();
                 SelectedItem = null;
             }

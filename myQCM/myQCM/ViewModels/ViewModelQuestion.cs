@@ -16,25 +16,32 @@ namespace myQCM.ViewModels
     {
         #region Fields
 
-
+        private ViewModelAnswers _ViewModelAnswers;
 
         #endregion
 
         #region Properties
 
-        
+        public IViewModelAnswers ViewModelAnswers => _ViewModelAnswers;
 
         #endregion
 
         #region Constructors
 
-
+        public ViewModelQuestion()
+        {
+            _ViewModelAnswers = new ViewModelAnswers();
+        }
 
         #endregion
 
         #region Methods
 
-
+        public override void LoadData()
+        {
+            _ViewModelAnswers.Question = Item;
+            _ViewModelAnswers.LoadData();
+        }
 
         #endregion
 

@@ -26,6 +26,8 @@ namespace myQCM.Models
 
         private Qcm _Qcm;
 
+        private List<Answer> answers;
+
         #endregion
 
         #region Properties
@@ -90,6 +92,17 @@ namespace myQCM.Models
             set { SetProperty(nameof(Qcm), ref _Qcm, value); }
         }
 
+        /// <summary>
+        /// Answers Question
+        /// Getter and Setter for Answers
+        /// </summary>
+        public List<Answer> Answers
+        {
+            get { return answers; }
+            set { answers = value; }
+        }
+
+
         #endregion
 
         #region Constructors
@@ -102,6 +115,7 @@ namespace myQCM.Models
             CreatedAt = created_at;
             UpdatedAt = updated_at;
             Qcm = qcm;
+            Answers = new List<Answer>();
         }
 
         #endregion

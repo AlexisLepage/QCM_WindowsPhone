@@ -17,7 +17,7 @@ namespace myQCM.Views
         {
             InitializeComponent();
 #if DEBUG
-            this.ViewModel = new ViewModels.ViewModelCategory();
+            this.ViewModel = new ViewModels.ViewModelQcms();
 #else
 
 #endif

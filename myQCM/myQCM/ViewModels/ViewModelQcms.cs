@@ -30,26 +30,10 @@ namespace myQCM.ViewModels
 
         #endregion
 
-        #region Constructors
-
-        public ViewModelQcms()
-        {
-        }
-
-        #endregion
-
         #region Methods
 
         public override void LoadData()
         {
-            //DateTime date = new DateTime();
-            //Category category1 = new Category(1, "Windows Phone", date, date);
-            //Category category2 = new Category(2, "Android", date, date);
-            //this.ItemsSource.Add(new Qcm(1, "Le Binding", date, date, 30, date, date, category1));
-            //this.ItemsSource.Add(new Qcm(2, "Le XAML", date, date, 60, date, date, category1));
-            //this.ItemsSource.Add(new Qcm(3, "La navigation au sein des views", date, date, 20, date, date, category2));
-            //this.ItemsSource.Add(new Qcm(4, "Test ", date, date, 45, date, date, category2));
-
             ObservableCollection<Qcm> qcms = new ObservableCollection<Qcm>();
 
             foreach (Qcm qcm in this.Category.Qcms)
@@ -78,19 +62,16 @@ namespace myQCM.ViewModels
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
-
-            //Chargement des données
-            LoadData();
         }
 
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedFrom(viewModel);
 
-            if (viewModel is IViewModelQcm)
+            if (viewModel is IViewModelQuestions)
             {
-                ((IViewModelQcm)viewModel).Item = this.SelectedItem;
-                ((IViewModelQcm)viewModel).LoadData();
+                ((IViewModelQuestions)viewModel).Qcm = this.SelectedItem;
+                ((IViewModelQuestions)viewModel).LoadData();
                 SelectedItem = null;
             }
         }

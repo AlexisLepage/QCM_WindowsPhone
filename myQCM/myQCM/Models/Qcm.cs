@@ -35,7 +35,7 @@ namespace myQCM.Models
 
         private Category _Category;
 
-        //private ObservableCollection<UserQcm> _UserQcms;
+        private ObservableCollection<UserQcm> _UserQcms;
 
         private List<Question> questions;
 
@@ -127,11 +127,11 @@ namespace myQCM.Models
         /// UserQcms Qcm.
         /// Getter and Setter for UserQcms.
         /// </summary>
-        //public ObservableCollection<UserQcm> UserQcms
-        //{
-        //    get { return _UserQcms; }
-        //    set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
-        //}
+        public ObservableCollection<UserQcm> UserQcms
+        {
+            get { return _UserQcms; }
+            set { SetProperty(nameof(UserQcms), ref _UserQcms, value); }
+        }
 
         /// <summary>
         /// Qcms Category
@@ -147,7 +147,7 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, List<UserQcm> user_qcms, List<Question> questions)
+        public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, ObservableCollection<UserQcm> user_qcms)
         {
             IdServer = id_server;
             Name = name;
@@ -158,7 +158,7 @@ namespace myQCM.Models
             UpdatedAt = updated_at;
             Category = category;
             UserQcms = user_qcms;
-            Questions = questions;
+            Questions = new List<Question>();
         }
         public Qcm()
         {

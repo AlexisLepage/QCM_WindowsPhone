@@ -7,14 +7,20 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MVVM.Views;
 
 namespace myQCM.Views
 {
-    public partial class QuestionsPage : PhoneApplicationPage
+    public partial class QuestionsPage : MVVMPhonePage
     {
         public QuestionsPage()
         {
             InitializeComponent();
+#if DEBUG
+            this.ViewModel = new ViewModels.ViewModelQuestions();
+#else
+
+#endif
         }
     }
 }

@@ -37,7 +37,6 @@
       </Grid.RowDefinitions>
 
       <ListBox ItemsSource="{Binding ItemsSource}"
-               DataContext="{Binding ViewModelQcms}"
                SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
                Style="{StaticResource HorizontalListBoxStyle}"
                ItemTemplate="{StaticResource QcmTemplate}"/>
