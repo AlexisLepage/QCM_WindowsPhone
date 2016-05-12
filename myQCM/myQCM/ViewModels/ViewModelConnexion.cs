@@ -27,12 +27,18 @@ namespace myQCM.ViewModels
 
         #region Properties
 
+        /// <summary>
+        /// Getter and Setter ConnectCommand
+        /// </summary>
         public DelegateCommand ConnectCommand
         {
             get { return _ConnectCommand; }
             set { _ConnectCommand = value; }
         }
 
+        /// <summary>
+        /// Getter and Setter UserCurrent
+        /// </summary>
         public User UserCurrent
         {
             get { return _UserCurrent; }
@@ -43,6 +49,9 @@ namespace myQCM.ViewModels
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor of ViewModelConnexion
+        /// </summary>
         public ViewModelConnexion()
         {
             LoadData();
@@ -54,6 +63,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data user
+        /// </summary>
         public override void LoadData()
         {
             base.LoadData();
@@ -62,6 +74,10 @@ namespace myQCM.ViewModels
             Item.PropertyChanged += Item_PropertyChanged;
         }
 
+        /// <summary>
+        /// On navigated from
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
@@ -74,6 +90,11 @@ namespace myQCM.ViewModels
             }
         }
 
+        /// <summary>
+        /// Item property changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Item_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)
@@ -87,11 +108,20 @@ namespace myQCM.ViewModels
             }
         }
 
+        /// <summary>
+        /// If can execute command
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         protected bool CanExecuteConnectCommand(object parameter)
         {
             return !string.IsNullOrWhiteSpace(Item.Username) && !string.IsNullOrWhiteSpace(Item.Password);
         }
 
+        /// <summary>
+        /// Execute connect command
+        /// </summary>
+        /// <param name="parameter"></param>
         protected void ExecuteConnectCommand(object parameter)
         {
             WebClient webClient = new WebClient();
@@ -99,6 +129,11 @@ namespace myQCM.ViewModels
             webClient.DownloadStringAsync(new Uri("http://192.168.218.11///Qcm/web/app_dev.php/api/users/" + Item.Username));
         }
 
+        /// <summary>
+        /// Load and convert json
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
             string jsonstream = e.Result;
