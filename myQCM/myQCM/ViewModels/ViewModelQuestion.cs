@@ -28,6 +28,9 @@ namespace myQCM.ViewModels
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor of ViewModelQuestion
+        /// </summary>
         public ViewModelQuestion()
         {
             _ViewModelAnswers = new ViewModelAnswers();
@@ -37,6 +40,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data question
+        /// </summary>
         public override void LoadData()
         {
             _ViewModelAnswers.Question = Item;

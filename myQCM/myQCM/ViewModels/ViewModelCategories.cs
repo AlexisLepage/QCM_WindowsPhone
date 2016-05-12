@@ -1,4 +1,4 @@
-﻿using MVVM.ViewModels;
+﻿ using MVVM.ViewModels;
 using myQCM.Models;
 using myQCM.ViewModels.Interfaces;
 using Newtonsoft.Json;
@@ -45,8 +45,8 @@ namespace myQCM.ViewModels
         {
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
 
-            //Teste si la catégorie est déja dans la liste des catégories puis ajoute si ce n'est pas le cas
-            // A VOIR AVEC LA METHODE CONTAINS
+            //Teste si la catégorie est déja dans la liste des catégories puis l'ajoute si ce n'est pas le cas
+            //Ajoute les qcms dans la liste des qcms de la catégorie
             bool exist = false;
             foreach (UserQcm userQcm in this.User.UserQcms)
             {

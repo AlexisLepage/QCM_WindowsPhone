@@ -22,6 +22,9 @@ namespace myQCM.ViewModels
 
         #region Properties
 
+        /// <summary>
+        /// Getter and Setter category
+        /// </summary>
         public Category Category
         {
             get { return _Category; }
@@ -32,6 +35,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data category
+        /// </summary>
         public override void LoadData()
         {
             ObservableCollection<Qcm> qcms = new ObservableCollection<Qcm>();
@@ -44,6 +50,9 @@ namespace myQCM.ViewModels
             this.ItemsSource = qcms;
         }
 
+        /// <summary>
+        /// Tracker property
+        /// </summary>
         protected override void InitializePropertyTrackers()
         {
             base.InitializePropertyTrackers();
@@ -59,11 +68,19 @@ namespace myQCM.ViewModels
 
         #region Navigation
 
+        /// <summary>
+        /// On navigated to
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
         }
 
+        /// <summary>
+        /// On navigated from
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedFrom(viewModel);
