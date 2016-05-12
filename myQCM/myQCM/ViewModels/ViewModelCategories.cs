@@ -22,9 +22,12 @@ namespace myQCM.ViewModels
         private User _User;
 
         #endregion
-
+   
         #region Properties
 
+        /// <summary>
+        /// Getter and setter User field.
+        /// </summary>
         public User User
         {
             get { return _User; }
@@ -35,6 +38,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data categories in ItemSource.
+        /// </summary>
         public override void LoadData()
         {
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
@@ -63,6 +69,9 @@ namespace myQCM.ViewModels
             this.ItemsSource = categories;
         }
 
+        /// <summary>
+        /// Tracker property.
+        /// </summary>
         protected override void InitializePropertyTrackers()
         {
             base.InitializePropertyTrackers();
@@ -76,13 +85,23 @@ namespace myQCM.ViewModels
             });
         }
 
+        #endregion
+
         #region Navigation
 
+        /// <summary>
+        /// On navigated to ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
         }
 
+        /// <summary>
+        /// On navigated from ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedFrom(viewModel);
@@ -94,9 +113,6 @@ namespace myQCM.ViewModels
                 SelectedItem = null;
             }
         }
-
-        
-        #endregion
 
         #endregion
    }

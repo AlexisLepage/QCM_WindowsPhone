@@ -19,12 +19,18 @@ namespace myQCM.ViewModels
 
         #region Properties
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IViewModelQcms ViewModelQcms => _ViewModelQcms;
 
         #endregion
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor ViewModelQcms.
+        /// </summary>
         public ViewModelCategory()
         {
             _ViewModelQcms = new ViewModelQcms();
@@ -34,6 +40,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data to ViewModelQcms.
+        /// </summary>
         public override void LoadData()
         {
             _ViewModelQcms.Category = Item;

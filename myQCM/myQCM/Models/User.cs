@@ -127,6 +127,17 @@ namespace myQCM.Models
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor User
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="email"></param>
+        /// <param name="name"></param>
+        /// <param name="firstname"></param>
+        /// <param name="created_at"></param>
+        /// <param name="updated_at"></param>
+        /// <param name="password"></param>
+        /// <param name="user_qcms"></param>
         public User(string username, string email, string name, string firstname, DateTime created_at, DateTime updated_at, string password, List<UserQcm> user_qcms)
         {
             Username = username;
@@ -139,11 +150,28 @@ namespace myQCM.Models
             UserQcms = user_qcms;
         }
 
+        /// <summary>
+        /// Constructor User
+        /// </summary>
         public User()
         {
 
         }
 
         #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Method Tostring for return Name User.
+        /// </summary>
+        /// <returns>Name</returns>
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        #endregion
+
     }
 }

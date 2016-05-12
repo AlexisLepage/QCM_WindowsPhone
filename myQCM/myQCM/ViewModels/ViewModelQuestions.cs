@@ -20,26 +20,35 @@ namespace myQCM.ViewModels
 
         private Question _Question;
 
-        public Question Question
-        {
-            get { return _Question; }
-            set { SetProperty(nameof(Question), ref _Question, value); }
-        }
-
-
         #endregion
 
         #region Properties
 
+        /// <summary>
+        /// Getter and Setter Qcm field.
+        /// </summary>
         public Qcm Qcm
         {
             get { return _Qcm; }
             set { SetProperty(nameof(Qcm), ref _Qcm, value); }
         }
 
+        /// <summary>
+        /// Getter and Setter Question field.
+        /// </summary>
+        public Question Question
+        {
+            get { return _Question; }
+            set { SetProperty(nameof(Question), ref _Question, value); }
+        }
+
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Load data questions to ItemSource and First question.
+        /// </summary>
         public override void LoadData()
         {
             ObservableCollection<Question> questions = new ObservableCollection<Question>();
@@ -54,6 +63,9 @@ namespace myQCM.ViewModels
             this.Question = questions.First();
         }
 
+        /// <summary>
+        /// Tracker property.
+        /// </summary>
         protected override void InitializePropertyTrackers()
         {
             base.InitializePropertyTrackers();
@@ -67,13 +79,24 @@ namespace myQCM.ViewModels
             });
         }
 
+        #endregion
+
+
         #region Navigation
 
+        /// <summary>
+        /// On navigated to ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
         }
 
+        /// <summary>
+        /// On navigated from ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedFrom(viewModel);
@@ -85,10 +108,6 @@ namespace myQCM.ViewModels
                 SelectedItem = null;
             }
         }
-
-
-        #endregion
-
         #endregion
     }
 }

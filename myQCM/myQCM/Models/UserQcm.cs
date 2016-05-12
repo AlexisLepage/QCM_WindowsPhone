@@ -71,6 +71,13 @@ namespace myQCM.Models
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor UserQcm
+        /// </summary>
+        /// <param name="id_server"></param>
+        /// <param name="is_done"></param>
+        /// <param name="user"></param>
+        /// <param name="qcm"></param>
         public UserQcm(int id_server, bool is_done, User user, Qcm qcm)
         {
             IdServer = id_server;
@@ -78,10 +85,6 @@ namespace myQCM.Models
             User = user;
             Qcm = qcm;
         }
-
-        #endregion
-
-        #region Methods
 
         #endregion
 

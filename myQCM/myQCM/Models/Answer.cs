@@ -105,6 +105,16 @@ namespace myQCM.Models
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor Answer
+        /// </summary>
+        /// <param name="id_server"></param>
+        /// <param name="title"></param>
+        /// <param name="is_valid"></param>
+        /// <param name="is_selected"></param>
+        /// <param name="created_at"></param>
+        /// <param name="updated_at"></param>
+        /// <param name="question"></param>
         public Answer(int id_server, string title, bool is_valid, bool is_selected, DateTime created_at, DateTime updated_at, Question question)
         {
             IdServer = id_server;
@@ -120,6 +130,10 @@ namespace myQCM.Models
 
         #region Methods
 
+        /// <summary>
+        /// Method Tostring for return title answer.
+        /// </summary>
+        /// <returns>Title</returns>
         public override string ToString()
         {
             return Title;

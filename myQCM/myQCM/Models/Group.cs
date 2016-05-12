@@ -21,28 +21,44 @@ namespace myQCM.Models
 
         private DateTime _UpdatedAt;
 
-    #endregion
+        #endregion
 
         #region Properties
 
+        /// <summary>
+        /// IdServer Group.
+        /// Getter and Setter for IdServer.
+        /// </summary>
         public int IdServer
         {
             get { return _IdServer; }
             set { _IdServer = value; }
         }
 
+        /// <summary>
+        /// Name Group.
+        /// Getter and Setter for Name.
+        /// </summary>
         public string Name
         {
             get { return _Name; }
             set { _Name = value; }
         }
 
+        /// <summary>
+        /// CreatedAt Group.
+        /// Getter and Setter for CreatedAt.
+        /// </summary>
         public DateTime CreatedAt
         {
             get { return _CreatedAt; }
             set { _CreatedAt = value; }
         }
 
+        /// <summary>
+        /// UpdatedAt Group.
+        /// Getter and Setter for UpdatedAt.
+        /// </summary>
         public DateTime UpdatedAt
         {
             get { return _UpdatedAt; }
@@ -52,9 +68,19 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public Group()
+        /// <summary>
+        /// Constructor Group
+        /// </summary>
+        /// <param name="id_server"></param>
+        /// <param name="name"></param>
+        /// <param name="created_at"></param>
+        /// <param name="updated_at"></param>
+        public Group(int id_server, string name, DateTime created_at, DateTime updated_at)
         {
-
+            Name = name;
+            IdServer = id_server;
+            CreatedAt = created_at;
+            UpdatedAt = updated_at;
         }
 
         #endregion

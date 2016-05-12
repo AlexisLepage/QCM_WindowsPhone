@@ -22,6 +22,9 @@ namespace myQCM.ViewModels
 
         #region Properties
 
+        /// <summary>
+        /// Getter and Setter Question field
+        /// </summary>
         public Question Question
         {
             get { return _Question; }
@@ -32,6 +35,9 @@ namespace myQCM.ViewModels
 
         #region Methods
 
+        /// <summary>
+        /// Load data answers in ItemSource.
+        /// </summary>
         public override void LoadData()
         {
             ObservableCollection<Answer> answers = new ObservableCollection<Answer>();
@@ -39,6 +45,9 @@ namespace myQCM.ViewModels
             this.ItemsSource = answers;
         }
 
+        /// <summary>
+        /// Tracker property.
+        /// </summary>
         protected override void InitializePropertyTrackers()
         {
             base.InitializePropertyTrackers();
@@ -54,14 +63,20 @@ namespace myQCM.ViewModels
 
         #region Navigation
 
+        /// <summary>
+        /// On navigated to ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedTo(IViewModel viewModel)
         {
             base.OnNavigatedTo(viewModel);
-
-            //Chargement des données
             LoadData();
         }
 
+        /// <summary>
+        /// On navigated from ViewModel.
+        /// </summary>
+        /// <param name="viewModel"></param>
         public override void OnNavigatedFrom(IViewModel viewModel)
         {
             base.OnNavigatedFrom(viewModel);

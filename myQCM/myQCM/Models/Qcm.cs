@@ -147,6 +147,18 @@ namespace myQCM.Models
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor Qcm
+        /// </summary>
+        /// <param name="id_server"></param>
+        /// <param name="name"></param>
+        /// <param name="beginning_at"></param>
+        /// <param name="finished_at"></param>
+        /// <param name="duration"></param>
+        /// <param name="created_at"></param>
+        /// <param name="updated_at"></param>
+        /// <param name="category"></param>
+        /// <param name="user_qcms"></param>
         public Qcm(int id_server, string name, DateTime beginning_at, DateTime finished_at, int duration, DateTime created_at, DateTime updated_at, Category category, ObservableCollection<UserQcm> user_qcms)
         {
             IdServer = id_server;
@@ -160,6 +172,10 @@ namespace myQCM.Models
             UserQcms = user_qcms;
             Questions = new List<Question>();
         }
+
+        /// <summary>
+        /// Constructor Qcm
+        /// </summary>
         public Qcm()
         {
 
@@ -169,6 +185,10 @@ namespace myQCM.Models
 
         #region Methods
 
+        /// <summary>
+        /// Method Tostring for return Name Qcm.
+        /// </summary>
+        /// <returns>Name</returns>
         public override string ToString()
         {
             return Name;

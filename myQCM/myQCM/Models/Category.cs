@@ -85,6 +85,13 @@ namespace myQCM.Models
 
         #region Constructors
 
+        /// <summary>
+        /// Constructor Category
+        /// </summary>
+        /// <param name="id_server"></param>
+        /// <param name="name"></param>
+        /// <param name="created_at"></param>
+        /// <param name="updated_at"></param>
         public Category(int id_server, string name, DateTime created_at, DateTime updated_at)
         {
             Name = name;
@@ -97,7 +104,10 @@ namespace myQCM.Models
         #endregion
 
         #region Methods
-
+        /// <summary>
+        /// Method Tostring for return name category.
+        /// </summary>
+        /// <returns>Name</returns>
         public override string ToString()
         {
             return Name;
