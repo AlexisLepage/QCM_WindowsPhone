@@ -85,13 +85,13 @@ namespace myQCM.Models
 
         #region Constructors
 
-        public Category(int id_server, string name, DateTime created_at, DateTime updated_at, List<Qcm> qcms)
+        public Category(int id_server, string name, DateTime created_at, DateTime updated_at)
         {
             Name = name;
             IdServer = id_server;
             CreatedAt = created_at;
             UpdatedAt = updated_at;
-            Qcms = qcms;
+            Qcms = new List<Qcm>();
         }
 
         #endregion

@@ -87,10 +87,10 @@ namespace myQCM.ViewModels
         {
             base.OnNavigatedFrom(viewModel);
 
-            if (viewModel is IViewModelCategory)
+            if (viewModel is IViewModelQcms)
             {
-                ((IViewModelCategory)viewModel).Item = this.SelectedItem;
-                ((IViewModelCategory)viewModel).LoadData();
+                ((IViewModelQcms)viewModel).Category = this.SelectedItem;
+                ((IViewModelQcms)viewModel).LoadData();
                 SelectedItem = null;
             }
         }
