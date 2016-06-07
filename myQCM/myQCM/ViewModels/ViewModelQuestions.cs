@@ -81,7 +81,6 @@ namespace myQCM.ViewModels
 
         #endregion
 
-
         #region Navigation
 
         /// <summary>

@@ -16,11 +16,7 @@ namespace myQCM.Views
         public QcmsPage()
         {
             InitializeComponent();
-#if DEBUG
             this.ViewModel = new ViewModels.ViewModelQcms();
-#else
-
-#endif
         }
     }
 }

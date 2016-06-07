@@ -16,11 +16,7 @@ namespace myQCM.Views
         public QuestionsPage()
         {
             InitializeComponent();
-#if DEBUG
             this.ViewModel = new ViewModels.ViewModelQuestions();
-#else
-
-#endif
         }
     }
 }
