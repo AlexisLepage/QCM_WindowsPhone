@@ -8,21 +8,25 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using MVVM.Views;
+using MVVM.Service;
 
 namespace myQCM.Views
 {
-    public partial class CategoriesPage : MVVMPhonePage
+    public partial class EndPage : PhoneApplicationPage
     {
-        public CategoriesPage()
+        public EndPage()
         {
             InitializeComponent();
-            this.ViewModel = new ViewModels.ViewModelCategories();
         }
 
         protected override void OnBackKeyPress(CancelEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
         }
     }
 }

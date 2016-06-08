@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
+using System.ComponentModel;
 
 namespace MVVM.Views
 {
@@ -50,6 +51,11 @@ namespace MVVM.Views
             {
                 this.ViewModel.OnNavigatedTo(((IMVVMPage)e.Content).ViewModel);
             }
+        }
+
+        protected override void OnBackKeyPress(CancelEventArgs e)
+        {
+            base.OnBackKeyPress(e);
         }
 
         #endregion

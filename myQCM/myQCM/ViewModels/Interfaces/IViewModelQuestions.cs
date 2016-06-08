@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace myQCM.ViewModels.Interfaces
 {
-    public interface IViewModelQuestions : IViewModelList<Question>
+    public interface IViewModelQuestions : IViewModelList<Answer>
     {
         Qcm Qcm { get; set; }
     }

@@ -23,6 +23,12 @@
       </StackPanel>
     </DataTemplate>
 
+    <DataTemplate x:Key="AnswerTemplate">
+      <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+        <CheckBox Content="{Binding Title}" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+      </StackPanel>
+    </DataTemplate>  
+      
     <Style x:Key="HorizontalListBoxStyle" TargetType="ListBox">
       <Style.Setters>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility"   Value="Auto"/>

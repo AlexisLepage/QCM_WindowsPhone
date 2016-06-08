@@ -16,6 +16,7 @@ namespace MVVM.ViewModels
         private ObservableCollection<T> _ItemsSource;
         private T _SelectedItem;
         private DelegateCommand _AddItemCommand;
+        private DelegateCommand _PreviousItemCommand;
 
         #endregion
 
@@ -35,6 +36,8 @@ namespace MVVM.ViewModels
 
         public DelegateCommand AddItemCommand => _AddItemCommand;
 
+        public DelegateCommand PreviousItemCommand => _PreviousItemCommand;
+
         #endregion
 
         #region Constructors
@@ -44,6 +47,8 @@ namespace MVVM.ViewModels
             ItemsSource = new ObservableCollection<T>();
 
             _AddItemCommand = new DelegateCommand(ExecuteAddItem, CanExecuteAddItem);
+
+            _PreviousItemCommand = new DelegateCommand(ExecutePreviousItem, CanExecutePreviousItem);
         }
 
         #endregion
@@ -58,6 +63,20 @@ namespace MVVM.ViewModels
         }
 
         protected virtual void ExecuteAddItem(object parameter)
+        {
+
+        }
+
+        #endregion
+
+        #region PreviousItemCommand
+
+        protected virtual bool CanExecutePreviousItem(object parameter)
+        {
+            return false;
+        }
+
+        protected virtual void ExecutePreviousItem(object parameter)
         {
 
         }

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace myQCM.Models
 
         private Qcm _Qcm;
 
-        private List<Answer> answers;
+        private ObservableCollection<Answer> answers;
 
         #endregion
 
@@ -96,10 +97,10 @@ namespace myQCM.Models
         /// Answers Question
         /// Getter and Setter for Answers
         /// </summary>
-        public List<Answer> Answers
+        public ObservableCollection<Answer> Answers
         {
             get { return answers; }
-            set { answers = value; }
+            set { SetProperty(nameof(Answers), ref answers, value); }
         }
 
 
@@ -124,7 +125,7 @@ namespace myQCM.Models
             CreatedAt = created_at;
             UpdatedAt = updated_at;
             Qcm = qcm;
-            Answers = new List<Answer>();
+            Answers = new ObservableCollection<Answer>();
         }
 
         #endregion
