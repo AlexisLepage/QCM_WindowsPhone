@@ -12,6 +12,7 @@ using myQCM.Models;
 using System.Net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Windows;
 
 namespace myQCM.ViewModels
 {
@@ -22,6 +23,8 @@ namespace myQCM.ViewModels
         private DelegateCommand _ConnectCommand;
 
         private User _UserCurrent;
+
+        static string IPWEBSERVICE = "http://192.168.214.16/Qcm/web/app_dev.php/api/";
 
         #endregion
 
@@ -35,7 +38,7 @@ namespace myQCM.ViewModels
             get { return _ConnectCommand; }
             set { _ConnectCommand = value; }
         }
-
+        
         /// <summary>
         /// Getter and Setter UserCurrent
         /// </summary>
@@ -69,7 +72,7 @@ namespace myQCM.ViewModels
         public override void LoadData()
         {
             base.LoadData();
-
+            
             Item = new User();
             Item.PropertyChanged += Item_PropertyChanged;
         }
@@ -124,9 +127,12 @@ namespace myQCM.ViewModels
         /// <param name="parameter"></param>
         protected void ExecuteConnectCommand(object parameter)
         {
-            WebClient webClient = new WebClient();
-            webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
-            webClient.DownloadStringAsync(new Uri("http://192.168.1.63/Qcm/web/app_dev.php/api/users/" + Item.Username));
+            string data = "username=" + Item.Username + "&password=" + Item.Password;
+                      
+            WebClient web = new WebClient();
+            web.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+            web.UploadStringCompleted += new UploadStringCompletedEventHandler(UploadStringCallback2);
+            web.UploadStringAsync((new Uri(IPWEBSERVICE + "auth")), "POST", data);
         }
 
         /// <summary>
@@ -134,18 +140,21 @@ namespace myQCM.ViewModels
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void WebClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        private void UploadStringCallback2(Object sender, UploadStringCompletedEventArgs e)
         {
-            string jsonstream = e.Result;
+            string jsonstream = (string)e.Result;
 
-           UserCurrent = JsonConvert.DeserializeObject<User>(jsonstream);
+            if (jsonstream.Equals(""))
+            {
+                MessageBox.Show("Erreur de connection", "Connection",  MessageBoxButton.OK);
+            }
+            UserCurrent = JsonConvert.DeserializeObject<User>(jsonstream);
 
             //Redirection vers page catégorie
             if (UserCurrent != null)
             {
                 ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/CategoriesPage.xaml", UriKind.Relative));
             }
-
         }
 
         #endregion

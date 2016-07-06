@@ -29,8 +29,6 @@
     <Grid HorizontalAlignment="Left" Height="719" Margin="0,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="480">
       <StackPanel HorizontalAlignment="Left" Height="637" VerticalAlignment="Top" Width="480">
         <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="{Binding Question.Title}" Height="146" HorizontalAlignment="Center" Width="480"/>
-      </StackPanel>
-      <StackPanel x:Name="checkboxes">
         <ListBox ItemsSource="{Binding ItemsSource}"
                SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
                Style="{StaticResource HorizontalListBoxStyle}"

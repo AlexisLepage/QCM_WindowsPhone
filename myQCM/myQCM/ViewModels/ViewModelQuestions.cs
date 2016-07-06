@@ -3,10 +3,14 @@ using MVVM.Service;
 using MVVM.ViewModels;
 using myQCM.Models;
 using myQCM.ViewModels.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,9 +27,11 @@ namespace myQCM.ViewModels
 
         ObservableCollection<Question> questions = new ObservableCollection<Question>();
 
-        public int index = 0;
+        public int index = 1;
 
         public bool isFirst = true;
+
+        public bool questionsOk = false;
 
         #endregion
 
@@ -60,17 +66,21 @@ namespace myQCM.ViewModels
         {
             if (isFirst == false)
             {
-                foreach (Question question in this.Qcm.Questions)
+
+                if (!questionsOk)
                 {
-                    questions.Add(question);
+                    foreach (Question question in this.Qcm.Questions)
+                    {
+                        questions.Add(question);
+                        questionsOk = true;
+                    }
                 }
 
                 this.Question = questions.ElementAt(index);
 
                 this.ItemsSource = this.Question.Answers;
             }
-
-            //isFirst = false;
+            
         }
 
         /// <summary>
@@ -129,15 +139,32 @@ namespace myQCM.ViewModels
             {
                 if (this.index == this.questions.IndexOf(this.questions.Last()))
                 {
-                    ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/EndPage.xaml", UriKind.Relative));
-                }
-            }
+                    Encoding encoding = new UTF8Encoding();
+                    var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
-            if (isFirst == false)
-            {
-                this.index = this.index + 1;
+                    var idUser = localSettings.Values["id"];
+                    int idQcm = Qcm.IdServer;
+                    float note = calculateNote(this.questions);
+
+                    string data = "id_qcm=" + idQcm + "&id_user=" + idUser + "&note=" + note;
+
+                    WebClient web = new WebClient();
+                    web.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+                    web.UploadStringCompleted += new UploadStringCompletedEventHandler(UploadStringCallback2);
+                    web.UploadStringAsync((new Uri("http://192.168.214.16/Qcm/web/app_dev.php/api/update_qcm")), "POST", data);
+
+                    ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/EndPage.xaml", UriKind.Relative));
+
+                    return false;
+                }
+
+                if (isFirst == false)
+                {
+                    this.index = this.index + 1;
+                }
+                
             }
-            
+                        
             this.LoadData();
 
             isFirst = false;
@@ -170,5 +197,42 @@ namespace myQCM.ViewModels
             return true;
         }
 
+
+        protected float calculateNote(ObservableCollection<Question> questions)
+        {
+            float note = 0;
+
+            foreach(Question question in questions)
+            {
+                if(question.Answers != null)
+                {
+                    bool goodAnswer = true;
+
+                    foreach (Answer answer in question.Answers)
+                    {
+                        if((answer.IsValid && !answer.IsSelected) || (!answer.IsValid && answer.IsSelected))
+                        {
+                            goodAnswer = false;
+                        }
+                    }
+
+                    if (goodAnswer)
+                    {
+                        note = note + question.Value;
+                    }
+                }
+            }
+
+            note = (note * 20) / questions.Count;
+
+            return note;
+
+        }
+
+        private static void UploadStringCallback2(Object sender, UploadStringCompletedEventArgs e)
+        {
+            string reply = (string)e.Result;
+            Console.WriteLine(reply);
+        }
     }
 }

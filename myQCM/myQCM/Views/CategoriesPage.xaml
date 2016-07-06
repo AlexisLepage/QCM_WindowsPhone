@@ -45,8 +45,8 @@
           <TextBlock Text="{Binding User.Username}" FontSize="48" FontFamily="Calibri" FontWeight="Bold" Foreground="#FFA09B9B"/>
           <TextBlock Text="{Binding User.Name}" FontSize="26.667" Margin="0,20,0,0"/>
           <TextBlock Text="{Binding User.Firstname}" FontSize="26.667" Margin="0,20,0,0"/>
-          <TextBlock Text="{Binding User.email}" FontSize="26.667" Margin="0,20,0,0"/>
-          <Button Content="Déconnexion" Command="{Binding ConnectCommand}" Margin="0,200,0,0">
+          <TextBlock Text="{Binding User.Email}" FontSize="26.667" Margin="0,20,0,0"/>
+          <Button Content="Déconnexion" Command="{Binding DeconnectCommand}" Margin="0,200,0,0">
             <Button.Background>
               <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
             </Button.Background>

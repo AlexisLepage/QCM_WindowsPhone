@@ -1,4 +1,4 @@
-﻿ using MVVM.ViewModels;
+﻿using MVVM.ViewModels;
 using myQCM.Models;
 using myQCM.ViewModels.Interfaces;
 using Newtonsoft.Json;
@@ -12,18 +12,30 @@ using System.Threading.Tasks;
 using MVVM.Interfaces;
 using MVVM.Service;
 using System.Collections.ObjectModel;
+using MVVM;
 
 namespace myQCM.ViewModels
 {
-   public class ViewModelCategories : ViewModelList<Category>, IViewModelCategories
-   {
+    public class ViewModelCategories : ViewModelList<Category>, IViewModelCategories
+    {
         #region Fields
+
+        private DelegateCommand _DeconnectCommand;
 
         private User _User;
 
         #endregion
-   
+
         #region Properties
+
+        /// <summary>
+        /// Getter and Setter ConnectCommand
+        /// </summary>
+        public DelegateCommand DeconnectCommand
+        {
+            get { return _DeconnectCommand; }
+            set { _DeconnectCommand = value; }
+        }
 
         /// <summary>
         /// Getter and setter User field.
@@ -32,6 +44,18 @@ namespace myQCM.ViewModels
         {
             get { return _User; }
             set { _User = value; }
+        }
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Constructor of ViewModelConnexion
+        /// </summary>
+        public ViewModelCategories()
+        {
+            _DeconnectCommand = new DelegateCommand(ExecuteDeconnectCommand, CanExecuteDeconnectCommand);
         }
 
         #endregion
@@ -45,8 +69,9 @@ namespace myQCM.ViewModels
         {
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
 
-            //Teste si la catégorie est déja dans la liste des catégories puis l'ajoute si ce n'est pas le cas
-            //Ajoute les qcms dans la liste des qcms de la catégorie
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["id"] = User.IdServer;
+
             bool exist = false;
             foreach (UserQcm userQcm in this.User.UserQcms)
             {
@@ -62,7 +87,7 @@ namespace myQCM.ViewModels
                 }
                 if (!exist)
                 {
-                    category.Qcms.Add(userQcm.Qcm);   
+                    category.Qcms.Add(userQcm.Qcm);
                     categories.Add(category);
                 }
             }
@@ -77,7 +102,7 @@ namespace myQCM.ViewModels
             base.InitializePropertyTrackers();
 
             this.AddPropertyTrackerAction(nameof(SelectedItem), (sender, args) =>
-            { 
+            {
                 if (SelectedItem != null)
                 {
                     ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/QcmsPage.xaml", UriKind.Relative));
@@ -114,6 +139,28 @@ namespace myQCM.ViewModels
             }
         }
 
+        /// <summary>
+        /// If can execute command
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
+        protected bool CanExecuteDeconnectCommand(object parameter)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// Execute connect command
+        /// </summary>
+        /// <param name="parameter"></param>
+        protected void ExecuteDeconnectCommand(object parameter)
+        {
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values.Remove("id");
+            ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/ConnexionPage.xaml", UriKind.Relative));
+        }
+
         #endregion
-   }
+
+    }
 }
