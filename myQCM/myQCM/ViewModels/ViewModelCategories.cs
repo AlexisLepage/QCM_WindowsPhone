@@ -71,6 +71,7 @@ namespace myQCM.ViewModels
 
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             localSettings.Values["id"] = User.IdServer;
+            localSettings.Values["username"] = User.Username;
 
             bool exist = false;
             foreach (UserQcm userQcm in this.User.UserQcms)

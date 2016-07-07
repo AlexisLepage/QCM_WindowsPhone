@@ -27,7 +27,7 @@ namespace myQCM.ViewModels
 
         ObservableCollection<Question> questions = new ObservableCollection<Question>();
 
-        public int index = 1;
+        public int index = 0;
 
         public bool isFirst = true;
 

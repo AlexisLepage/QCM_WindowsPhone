@@ -93,9 +93,12 @@ namespace myQCM.ViewModels
         /// <param name="parameter"></param>
         protected void ExecuteConnectCommand(object parameter)
         {
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            var username = localSettings.Values["username"];
+
             WebClient webClient = new WebClient();
             webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
-            webClient.DownloadStringAsync(new Uri("http://192.168.214.16/Qcm/web/app_dev.php/api/users/" + "admin"));
+            webClient.DownloadStringAsync(new Uri("http://192.168.214.16/Qcm/web/app_dev.php/api/users/" + username));
         }
 
         /// <summary>

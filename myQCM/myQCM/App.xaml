@@ -18,8 +18,7 @@
     <DataTemplate x:Key="QcmTemplate">
       <StackPanel VerticalAlignment="Center">
         <TextBlock Text="{Binding Name}"/>
-        <TextBlock Text="{Binding Duration}"/>
-        <TextBlock Text="{Binding FinishedAt}"/>
+        <TextBlock Text="{Binding Duration, StringFormat= '\{0\} min'}"/>
       </StackPanel>
     </DataTemplate>
 
