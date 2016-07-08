@@ -24,7 +24,7 @@ namespace myQCM.ViewModels
 
         private User _UserCurrent;
 
-        static string IPWEBSERVICE = "http://192.168.214.16/Qcm/web/app_dev.php/api/";
+        static string IPWEBSERVICE = "http://172.20.10.4/Qcm/web/app_dev.php/api/";
 
         #endregion
 

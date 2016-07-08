@@ -113,6 +113,7 @@
     <Compile Include="ViewModels\Interfaces\IViewModelCategories.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelCategory.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelConnexion.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModelEnd.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQcm.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQcms.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModelQuestion.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="ViewModels\ViewModelCategories.cs" />
     <Compile Include="ViewModels\ViewModelCategory.cs" />
     <Compile Include="ViewModels\ViewModelConnexion.cs" />
+    <Compile Include="ViewModels\ViewModelEnd.cs" />
     <Compile Include="ViewModels\ViewModelQcm.cs" />
     <Compile Include="ViewModels\ViewModelQcms.cs" />
     <Compile Include="ViewModels\ViewModelQuestion.cs" />
@@ -131,6 +133,9 @@
     </Compile>
     <Compile Include="Views\ConnexionPage.xaml.cs">
       <DependentUpon>ConnexionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EndPage.xaml.cs">
+      <DependentUpon>EndPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\QcmsPage.xaml.cs">
       <DependentUpon>QcmsPage.xaml</DependentUpon>
@@ -151,6 +156,10 @@
     <Page Include="Views\ConnexionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EndPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\QcmsPage.xaml">
       <Generator>MSBuild:Compile</Generator>

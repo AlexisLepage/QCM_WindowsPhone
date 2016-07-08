@@ -151,7 +151,7 @@ namespace myQCM.ViewModels
                     WebClient web = new WebClient();
                     web.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
                     web.UploadStringCompleted += new UploadStringCompletedEventHandler(UploadStringCallback2);
-                    web.UploadStringAsync((new Uri("http://192.168.214.16/Qcm/web/app_dev.php/api/update_qcm")), "POST", data);
+                    web.UploadStringAsync((new Uri("http://172.20.10.4/Qcm/web/app_dev.php/api/update_qcm")), "POST", data);
 
                     ServiceResolver.GetService<INavigationService>().Navigate(new Uri("/Views/EndPage.xaml", UriKind.Relative));
 
@@ -201,11 +201,14 @@ namespace myQCM.ViewModels
         protected float calculateNote(ObservableCollection<Question> questions)
         {
             float note = 0;
+            float noteMax = 0;
 
             foreach(Question question in questions)
             {
+                noteMax = noteMax + question.Value;
                 if(question.Answers != null)
                 {
+             
                     bool goodAnswer = true;
 
                     foreach (Answer answer in question.Answers)
@@ -223,7 +226,7 @@ namespace myQCM.ViewModels
                 }
             }
 
-            note = (note * 20) / questions.Count;
+            note = (note * 20) / noteMax;
 
             return note;
 
